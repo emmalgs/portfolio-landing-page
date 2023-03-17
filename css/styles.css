@@ -38,6 +38,7 @@ body {
     grid-template-rows: repeat(12, 1fr);
     border-bottom: none;
     border-right: none;
+    padding-bottom: 2em;
 }
 
 .header {
@@ -207,7 +208,8 @@ li a:hover {
     border-radius: 2px;
     margin: .5em;
 }
-.about-container {
+.about-container,
+.contact-container {
     grid-area: 3 / 1 / 7 / 7;
     display: flex;
     justify-content: space-between;
@@ -216,6 +218,19 @@ li a:hover {
 
     font-family: var(--info-font);
     font-size: 1.1em;
+}
+.contact-container {
+    text-align: center;
+}
+
+.contact-container p {
+    padding: 1em;
+    margin: .4em;
+}
+
+.contact-container span {
+    font-weight: bold;
+    color: var(--main-highlight);
 }
 
 .color-block {
@@ -244,6 +259,19 @@ li a:hover {
     background-image: url("../images/drawing.png");
     background-repeat: no-repeat;
     background-size: 20px;
+}
+
+.info {
+    padding: 1em;
+}
+
+.info a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.info img {
+    background-color: var(--card-color);
 }
 
 @media screen and (max-width: 790px) {
@@ -311,5 +339,8 @@ li a:hover {
         width: 250px;
         height: 250px;
         object-fit: cover;
+    }
+    .contact-container {
+        flex-wrap: wrap;
     }
 }

@@ -150,9 +150,21 @@ li a:hover {
     background-color: var(--card-lowlight);
 }   
 
+.green:hover {
+    margin: 1em;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
 .red {
     grid-area: 1 / 6 / 7 / 7;
     background-color: red;
+}
+
+.red:hover {
+    margin: 1em;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
 .yellow {
@@ -160,10 +172,22 @@ li a:hover {
     background-color: var(--card-color);
 }
 
+.yellow:hover {
+    margin: 1em;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
 .light-blue {
     grid-area: 7 /4 / 13 / 7;
     background-color: var(--main-highlight);
     border-left: 5px solid var(--main-color);
+}
+
+.light-blue:hover {
+    margin: 1em;
+    cursor: pointer;
+    transition: 0.1s;
 }
 
 .card-container {

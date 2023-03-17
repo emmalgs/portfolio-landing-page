@@ -238,6 +238,13 @@ li a:hover {
     padding: .4em;
     border: 1px double var(--main-color)
 }
+.about li {
+    list-style: none;
+    padding: 5px 30px;
+    background-image: url("../images/drawing.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
 
 @media screen and (max-width: 790px) {
     body {

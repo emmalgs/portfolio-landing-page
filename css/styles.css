@@ -162,7 +162,7 @@ li a:hover {
 }
 
 .red:hover {
-    margin: 1em;
+    margin: .4em;
     cursor: pointer;
     transition: 0.1s;
 }
@@ -173,7 +173,7 @@ li a:hover {
 }
 
 .yellow:hover {
-    margin: 1em;
+    margin: .2em;
     cursor: pointer;
     transition: 0.1s;
 }

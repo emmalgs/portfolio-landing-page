@@ -38,10 +38,24 @@ body {
     font-size: 3em;
     margin: 0;
     padding-left: .2em;
+    position: absolute;
+    opacity: 100%;
 }
 
-.header h3 a {
-    text-decoration: none;
+.header p {
+    font-family: var(--header-font);
+    color: var(--main-highlight);
+    font-size: 3em;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    padding-left: 6em;
+}
+
+.header p:hover {
+    opacity: 100%;
+    cursor: pointer;
+    border-bottom: 1px solid var(--main-color);
 }
 
 .nav {

@@ -80,15 +80,39 @@ li:hover {
 
 .main-container {
     grid-area: 2 / 1 / 7 / 3;
-    text-align: center;
+    margin: 1em;
+    padding: 4em;
 
     display: grid;
-    grid-template-columns: repeat(6, 40px);
-    grid-template-rows: repeat(12, 40px);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: .1em;
 }
 
 .blue {
+    grid-area: 1/1/span 5/span 5;
+    background-color: var(--main-color)
+}
 
+.green {
+    grid-area: 6 / 1 / 13 / 4;
+    background-color: var(--card-lowlight);
+}   
+
+.red {
+    grid-area: 1 / 6 / 7 / 7;
+    background-color: red;
+}
+
+.yellow {
+    grid-area: 6 / 4 / 7 / 6;
+    background-color: var(--card-color);
+}
+
+.light-blue {
+    grid-area: 7 /4 / 13 / 7;
+    background-color: var(--main-highlight);
+    border-left: 5px solid var(--main-color);
 }
 
 .card {

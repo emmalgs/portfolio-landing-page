@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Josefin+Sans:ital,wght@0,300;0,700;1,300&family=Poiret+One&family=Poppins&family=Righteous&family=Unbounded:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Josefin+Sans:ital,wght@0,300;0,700;1,300&family=Unbounded:wght@300;800&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -11,7 +11,7 @@
     --card-lowlight: #76B041;
     --header-font: Unbounded, Helvetica, sans-serif;
     --nav-font: Beth Ellen, Helvetica, sans-serif;
-    --info-font: Poppins, Helvetica, sans-serif;
+    --info-font: Unbounded, Helvetica, sans-serif;
 }
 
 body {
@@ -19,7 +19,8 @@ body {
 }
 
 .container,
-.project-container {
+.project-container,
+.info-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -31,6 +32,12 @@ body {
 .project-container {
     border: none;
     grid-template-rows: repeat(12, 1fr);
+}
+
+.info-container {
+    grid-template-rows: repeat(12, 1fr);
+    border-bottom: none;
+    border-right: none;
 }
 
 .header {
@@ -84,6 +91,8 @@ body {
     font-family: var(--nav-font); 
     font-size: 1.2em;
     margin: 0;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
 }
 
 .nav ul,
@@ -91,6 +100,7 @@ body {
     margin: 0;
     padding-left: 0;
     list-style-type: none;
+    border: none;
 }
 
 li {
@@ -201,19 +211,28 @@ li a:hover {
     grid-area: 3 / 1 / 7 / 7;
     display: flex;
     justify-content: space-between;
-    gap: 4em;
+    gap: 3em;
+    margin-top: 2em;
 
     font-family: var(--info-font);
+    font-size: 1.1em;
 }
 
 .color-block {
-    grid-area: 3 / 2 / 5 / 3;
+    grid-area: 4 / 2 / 9 / 4;
     background-color: var(--card-color);
 }
 
+.about {
+    margin: 1em;
+}
+
+.profile-img {
+    margin: 1em;
+}
 .profile-img img {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 50%;
     padding: .4em;
@@ -262,5 +281,28 @@ li a:hover {
     }
     .card {
         width: 80%;
+    }
+
+    .card img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .about-container {
+        grid-area: 3 / 1 / 7 / 7;
+        flex-direction: column;
+        align-items: center;
+        justify-content: none;
+        padding: .4em;
+    }
+
+    .profile-img {
+        padding-top: 1em;
+    }
+
+    .profile-img img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
     }
 }

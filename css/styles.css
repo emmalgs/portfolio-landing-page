@@ -21,7 +21,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 25%);
+    grid-template-rows: 15vh, 1fr, 1fr, 1fr, 1fr;
 }
 
 .header {
@@ -32,12 +32,14 @@ body {
     color: var(--main-highlight);
     font-family: var(--header-font);
     text-transform: uppercase;
+    height: 30vh;
 }
 
 .header h1 {
     font-size: 10em;
-    position: fixed;
     opacity: 50%;
+    z-index: -1;
+    position: fixed;
 }
 
 .header h3 {
@@ -45,7 +47,8 @@ body {
     margin-top: 6em;
     margin-bottom: 2em;
     position: fixed;
-    color: var(--light-color);
+    color: var(--main-highlight);
+    z-index: -1;
 
 }
 
@@ -77,15 +80,22 @@ li:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 1em;
+    margin: .5em;
+    gap: .2em;
 }
 
 .card {
-    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 35%;
     height: auto;
     background-color: #DACC3E;
     margin: 1em;
     border-radius: 4px;
+    text-align: center;
+    font-family: var(--info-font);
 }
 
 .card:hover {
@@ -94,6 +104,6 @@ li:hover {
 }
 
 img {
-    width: 80%;
-    height: auto;
+    width: 90%;
+    border-radius: 2px;
 }

@@ -16,15 +16,22 @@
 
 body {
     background-color: var(--light-color);
-    border: 1px solid var(--main-color);
-    margin: 2em;
+
 }
 
-.container {
+.container,
+.project-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     height: 90vh;
+    border: 1px solid var(--main-color);
+    margin: 2em;
+}
+
+.project-container {
+    border: none;
+    grid-template-rows: repeat(12, 1fr);
 }
 
 .header {
@@ -59,6 +66,11 @@ body {
     transition: 0.2s;
 }
 
+.header a {
+    text-decoration: none;
+    color: var(--main-highlight);
+}
+
 .nav {
     grid-area: 2 / 3 / 7 / 7;
     font-size: 4em;   
@@ -72,6 +84,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     font-family: var(--nav-font); 
+    font-size: 1.2em;
     text-transform: uppercase;
     margin: 0;
 }
@@ -144,12 +157,19 @@ li a:hover {
     border-left: 5px solid var(--main-color);
 }
 
+.card-container {
+    grid-area: 3 / 1 / 7 / 7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    width: 410px;
+    width: 350px;
     height: auto;
     background-color: #DACC3E;
     margin: 1em;
@@ -173,8 +193,8 @@ li a:hover {
 }
 
 img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 2px;
     margin: .5em;

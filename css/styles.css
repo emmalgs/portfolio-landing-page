@@ -29,7 +29,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 20vh;
     color: var(--main-highlight);
     font-family: var(--header-font);
     text-transform: uppercase;
@@ -51,7 +50,7 @@ body {
 }
 
 .nav {
-    grid-area: 3 / 1 / 7 / 2;
+    grid-area: 2 / 1 / 7 / 2;
     margin-left: 2em;
     font-size: 1.5em;   
     font-family: var(--header-font); 
@@ -74,7 +73,7 @@ li:hover {
 }
 
 .main-container {
-    grid-area: 3 / 2 / 7 / 7;
+    grid-area: 2 / 2 / 7 / 7;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -92,4 +91,9 @@ li:hover {
 .card:hover {
     background-color: var(--card-lowlight);
     box-shadow: 5px 5px 5px #001d2ce5;
+}
+
+img {
+    width: 80%;
+    height: auto;
 }

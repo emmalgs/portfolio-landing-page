@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-color: #003049;
+    --card-color: #DACC3E;
+    --main-highlight: #008DD5;
+    --light-color: #F9E9EC;
+    --card-lowlight: #76B041;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -28,5 +36,19 @@ ul {
 
 li {
     margin: 1em;
+}
 
+.main-container {
+    grid-area: 2 / 2 / 5 / 7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.card {
+    width: 20%;
+    height: auto;
+    background-color: #DACC3E;
+    margin: 1em;
 }

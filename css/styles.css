@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,700;1,300&family=Poppins&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Josefin+Sans:ital,wght@0,300;0,700;1,300&family=Poiret+One&family=Poppins&family=Righteous&family=Unbounded:wght@800&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -8,92 +7,88 @@
     --main-color: #003049;
     --card-color: #DACC3E;
     --main-highlight: #008DD5;
-    --light-color: #F9E9EC;
+    --light-color: #f9f0e9;
     --card-lowlight: #76B041;
-    --header-font: Josefin Sans, Helvetica, sans-serif;
+    --header-font: Unbounded, Helvetica, sans-serif;
+    --nav-font: Beth Ellen, Helvetica, sans-serif;
     --info-font: Poppins, Helvetica, sans-serif;
 }
 
 body {
-    background-color: var(--main-color);
+    background-color: var(--light-color);
+    border: 1px solid var(--main-color);
+    margin: 2em;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 15vh, 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: 90vh;
 }
 
 .header {
-    grid-area: 1 / 2 / 2 / 7;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    color: var(--main-highlight);
+    grid-area: 1 / 1 / 2 / 7;
+    color: var(--main-color);
     font-family: var(--header-font);
     text-transform: uppercase;
-    height: 30vh;
 }
 
 .header h1 {
-    font-size: 10em;
-    opacity: 50%;
-    z-index: -1;
-    position: fixed;
+    font-size: 3em;
+    margin: 0;
+    padding-left: .2em;
 }
 
-.header h3 {
-    font-size: 3em;
-    margin-top: 6em;
-    margin-bottom: 2em;
-    position: fixed;
-    color: var(--main-highlight);
-    z-index: -1;
-
+.header h3 a {
+    text-decoration: none;
 }
 
 .nav {
-    grid-area: 2 / 1 / 7 / 2;
-    margin-left: 2em;
-    margin-top: 11em;
-    font-size: 1.5em;   
-    font-family: var(--header-font); 
+    grid-area: 2 / 3 / 7 / 7;
+    font-size: 4em;   
+    font-family: var(--nav-font); 
     text-transform: uppercase;
-    position: fixed;
+    margin: 0;
 }
 
 ul {
+    margin: 0;
     padding-left: 0;
     list-style-type: none;
 }
 
 li {
-    margin: 1em;
-    padding: .8em;
+    margin: .1em;
+    padding-left: 2em;
 }
 
 li a {
     text-decoration: none;
-    color: var(--light-color);
+    color: var(--card-color);
 }
 
 li a:hover {
-    color: var(--card-lowlight);
+    font-family: var(--header-font);
+    color: var(--main-highlight);
     cursor: pointer;
 }
 
 li:hover {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--main-color);
 }
 
 .main-container {
-    grid-area: 2 / 2 / 7 / 7;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 3em;
-    padding-left: 3em;
-    gap: .2em;
+    grid-area: 2 / 1 / 7 / 3;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(6, 40px);
+    grid-template-rows: repeat(12, 40px);
+}
+
+.blue {
+
 }
 
 .card {

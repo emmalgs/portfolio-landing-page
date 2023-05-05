@@ -14,6 +14,9 @@ export default function renderHome(){
 
   const main = document.querySelector("#main");
   main.classList = "main-container";
+  while (main.firstChild) {
+    main.removeChild(main.firstChild);
+  }
 
   const blue = document.createElement("div");
   const green = document.createElement("div");

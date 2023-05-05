@@ -9,10 +9,11 @@ export default function renderHome(){
   const nav = document.querySelector("#nav");
   nav.classList = "nav";
   nav.classList.remove("nav-top");
+  const ul = nav.querySelector("ul");
+  ul.classList.remove("nav-top");
 
   const main = document.querySelector("#main");
   main.classList = "main-container";
-  main.childNodes.remove();
 
   const blue = document.createElement("div");
   const green = document.createElement("div");

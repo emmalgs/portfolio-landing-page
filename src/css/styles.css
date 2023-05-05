@@ -108,20 +108,22 @@ li {
     margin: .1em;
 }
 
-li a {
-    text-decoration: none;
+#projects-link,
+#about-link,
+#contact-link {
     color: var(--card-color);
     padding-left: 2.4em;
 }
 
-li a:hover {
+#projects-link:hover,
+#about-link:hover,
+#contact-link:hover {
     font-family: var(--header-font);
     color: var(--main-highlight);
     cursor: pointer;
     border-bottom: 2px solid var(--main-color);
     transition: 0.2s;
 }
-
 
 .main-container {
     grid-area: 2 / 1 / 7 / 3;
@@ -232,6 +234,7 @@ li a:hover {
     border-radius: 2px;
     margin: .5em;
 }
+
 .about-container,
 .contact-container {
     grid-area: 3 / 1 / 7 / 7;

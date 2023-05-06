@@ -1,43 +1,30 @@
+import { links, renderTopNav, clearMain, setMainClass, setContainerClass, clearBlockStyle } from "./render";
 import artInspo from "./../assets/images/art-inspo.gif";
 import planetAger from "./../assets/images/planet-age.gif";
 import prioritime from "./../assets/images/prioritime2.gif";
 import currency from "./../assets/images/currency.gif";
 import pizza from "./../assets/images/pizza.gif";
+import bakery from "./../assets/images/bakery.gif";
+
 
 export default function renderProjects(){
-  renderNav();
+  links();
+  renderTopNav();
   clearMain();
   setMainClass("card-container");
+  setContainerClass("project-container");
+  clearBlockStyle();
 
-  createCards(main, "Art Inspirer", artInspo, "https://github.com/emmalgs/art-inspiration", "Enter a 'vibe' to see related art from the Art Institute of Chicago");
-  createCards(main, "Planetary Ager", planetAger, "https://github.com/emmalgs/space-age-calculator", "Type in your age to see how old you are on other planets");
-  createCards(main, "PrioriTime", prioritime, "https://github.com/emmalgs/prioritime", "Epicodus JavaScript Team Week Project");
-  createCards(main, "Currency Exchange", currency, "https://github.com/emmalgs/currency-exchange", "Currency exchange utilizing APIs to access up-to-date global exchange rates");
-  createCards(main, "Bucky's One Stop Pizza Shop", pizza, "https://github.com/emmalgs/make-a-pizza", "Build a pizza and add it to your order. Be warned, the chef is indeed a guinea pig.");
+  createCards("Art Inspirer", artInspo, "https://github.com/emmalgs/art-inspiration", "Enter a 'vibe' to see related art from the Art Institute of Chicago");
+  createCards("Planetary Ager", planetAger, "https://github.com/emmalgs/space-age-calculator", "Type in your age to see how old you are on other planets");
+  createCards("PrioriTime", prioritime, "https://github.com/emmalgs/prioritime", "Epicodus JavaScript Team Week Project");
+  createCards("Currency Exchange", currency, "https://github.com/emmalgs/currency-exchange", "Currency exchange utilizing APIs to access up-to-date global exchange rates");
+  createCards("Bucky's One Stop Pizza Shop", pizza, "https://github.com/emmalgs/make-a-pizza", "Build a pizza and add it to your order. Be warned, the chef is indeed a guinea pig.");
+  createCards("Ze Bakery", bakery, "https://github.com/emmalgs/Bakery.Solution", "C# console application");
 }
 
-export function renderNav() {
-  const nav = document.querySelector("#nav");
-  nav.classList = "nav-top";
-  nav.classList.remove("nav");
-  const ul = nav.querySelector("ul");
-  ul.classList = "nav-top";
-}
-
-export function clearMain() {
-  const main = document.querySelector("#main");
-  while (main.firstChild) {
-    main.removeChild(main.firstChild);
-  }
-}
-
-export function setMainClass(className) {
-  const main = document.querySelector("#main");
-  main.classList = className;
-  main.classList.remove("main-container");
-}
-
-function createCards(mainDiv, title, imageSrc, link, description) {
+function createCards(title, imageSrc, link, description) {
+  const mainDiv = document.querySelector("#main");
   const cardDiv = document.createElement("div");
   cardDiv.classList = "card";
   const a = document.createElement("a");

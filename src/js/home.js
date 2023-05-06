@@ -1,23 +1,14 @@
-import renderProjects from "./projects";
-
-export function links(){
-  document.querySelector("#projects-link").addEventListener("click", renderProjects);
-}
+import { links, clearMain, renderHomeNav, setContainerClass, setMainClass, clearBlockStyle } from "./render.js";
 
 export default function renderHome(){
   links();
-  const nav = document.querySelector("#nav");
-  nav.classList = "nav";
-  nav.classList.remove("nav-top");
-  const ul = nav.querySelector("ul");
-  ul.classList.remove("nav-top");
+  renderHomeNav();
+  clearMain();
+  setMainClass("main-container");
+  setContainerClass("container");
+  clearBlockStyle();
 
   const main = document.querySelector("#main");
-  main.classList = "main-container";
-  while (main.firstChild) {
-    main.removeChild(main.firstChild);
-  }
-
   const blue = document.createElement("div");
   const green = document.createElement("div");
   const red = document.createElement("div");

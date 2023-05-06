@@ -182,7 +182,6 @@ li {
 .light-blue {
     grid-area: 7 /4 / 13 / 7;
     background-color: var(--main-highlight);
-    border-left: 5px solid var(--main-color);
 }
 
 .light-blue:hover {

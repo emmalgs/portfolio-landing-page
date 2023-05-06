@@ -1,11 +1,13 @@
 import renderAbout from "./about";
 import renderProjects from "./projects";
 import renderHome from "./home";
+import renderContact from "./contact";
 
 export function links(){
   document.querySelector(".header").addEventListener("click", renderHome);
   document.querySelector("#projects-link").addEventListener("click", renderProjects);
   document.querySelector("#about-link").addEventListener("click", renderAbout);
+  document.querySelector("#contact-link").addEventListener("click", renderContact);
 }
 
 export function renderTopNav() {

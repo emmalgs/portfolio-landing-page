@@ -31,7 +31,7 @@ body {
 
 .project-container {
     border: none;
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(20, 1fr);
 }
 
 .info-container {
@@ -191,7 +191,7 @@ li {
 }
 
 .card-container {
-    grid-area: 3 / 1 / 13 / 13;
+    grid-area: 3 / 1 / 21 / 13;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -270,8 +270,14 @@ li {
     background-color: var(--card-color);
 }
 
+
 .about {
     margin: 1em;
+}
+
+.color-block {
+    background-color: var(--card-color);
+    grid-area: 4 / 2 / 12 / 5;
 }
 
 .profile-img {
@@ -356,11 +362,16 @@ li {
         object-fit: cover;
     }
     .about-container {
-        grid-area: 3 / 1 / 7 / 7;
+        grid-area: 3 / 1 / 13 / 13;
         flex-direction: column;
         align-items: center;
-        justify-content: none;
         padding: .4em;
+        gap: 0;
+        margin: 0;
+    }
+
+    .color-block {
+        grid-area: 4 / 2 / 9 / 4;
     }
 
     .profile-img {
@@ -374,5 +385,6 @@ li {
     }
     .contact-container {
         flex-wrap: wrap;
+        justify-content: center;
     }
 }

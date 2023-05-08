@@ -2,16 +2,19 @@
 
 #### By _**Emma Gerigscott**_
 
-#### _Portfolio of coding projects_
+#### _A portfolio of some of my favorite coding projects to date_
 
 ## Technologies Used
 
+* NodeJS
+* webpack
+* JavaScript
 * HTML
 * CSS
 
 ## Description
 
-A home page featuring a little bauhaus inspired design and links to a project page, about page, and contact page. 
+Visit my webpage to checkout some of my past projects, read about me, and find out how to get in touch! This page/project is ongoing.
 
 ## Setup/Installation Requirements
 
@@ -21,8 +24,8 @@ A home page featuring a little bauhaus inspired design and links to a project pa
 
 ## Known Bugs
 
-* _Bottom margin non-existant_
-* _Project images still dummy files_
+* _CSS Media query for home page is off_
+* _Still need to add easter eggs.._
 
 ## License
 

@@ -2,7 +2,7 @@
 
 #### By _**Emma Gerigscott**_
 
-<img src="./src/assets/images/portfolio.gif" alt="webpage gif" width="500">
+![gif of webpage](./src/assets/images/portfolio.gif)
 
 #### _A portfolio of some of my favorite coding projects to date_
 

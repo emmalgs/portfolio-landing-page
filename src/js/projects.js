@@ -5,6 +5,9 @@ import prioritime from "./../assets/images/prioritime2.gif";
 import currency from "./../assets/images/currency.gif";
 import pizza from "./../assets/images/pizza.gif";
 import bakery from "./../assets/images/bakery.gif";
+import pierre from "./../assets/images/pierre.gif";
+import claire from "./../assets/images/claire.gif";
+import opalcollege from "./../assets/images/opalcollege.gif";
 
 
 export default function renderProjects(){
@@ -21,6 +24,9 @@ export default function renderProjects(){
   createCards("Currency Exchange", currency, "https://github.com/emmalgs/currency-exchange", "Currency exchange utilizing APIs to access up-to-date global exchange rates");
   createCards("Bucky's One Stop Pizza Shop", pizza, "https://github.com/emmalgs/make-a-pizza", "Build a pizza and add it to your order. Be warned, the chef is indeed a guinea pig.");
   createCards("Ze Bakery", bakery, "https://github.com/emmalgs/Bakery.Solution", "C# console application");
+  createCards("Pierre's Backend Bakery", pierre, "https://github.com/emmalgs/BakeryTracker.Solution", "C# webpage using MVC");
+  createCards("Claire's Hair Salon", claire, "https://github.com/emmalgs/HairSalon.Solution", "C# webpage using MVC and MySQLConnector");
+  createCards("Opal College Registrar", opalcollege, "https://github.com/emmalgs/OpalCollege.Solution", "C# webpage using MVC, Entity Framework Core, and Migrations");
 }
 
 function createCards(title, imageSrc, link, description) {
